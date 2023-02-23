@@ -60,13 +60,16 @@ data_interp = interp1(t_canon', data_filtered, t', 'nearest');
 target_wave = data_interp;
 target_wave(find(isnan(target_wave))) = 0;
 
+% figure()
+% plot(target_wave)
+
 %% Calculate PWM duty cycle
-period_samples = round(period * sample_rate);
+period_samples = round(period * sample_rate); % =5
 period_num = floor(N / period_samples);
 duty = zeros(period_num, 1);
 pwm_wave = zeros(N, 1);
 for ii = 1:period_num
-    strength = target_wave((ii-1) * period_samples + 1 );
+    strength = target_wave((ii-1) * period_samples + 1 ); % 隔5个取1个
     duty(ii) = (strength + 1) / 2 * (duty_upper_bound - duty_lower_bound) + duty_lower_bound;
     busy_samples = round(duty(ii) * period_samples);
     pwm_wave((ii-1) * period_samples + 1: (ii-1) * period_samples + busy_samples) = 1;
