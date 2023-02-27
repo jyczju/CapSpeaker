@@ -14,7 +14,7 @@
 #define LEDC_OUTPUT_IO          (5) // Define the output GPIO
 #define LEDC_CHANNEL            LEDC_CHANNEL_0
 #define LEDC_DUTY_RES           LEDC_TIMER_11_BIT // Set duty resolution to 11 bits
-#define LEDC_FREQUENCY          (32000) // Frequency in Hertz. Set frequency at 25 kHz
+#define LEDC_FREQUENCY          (24000) // Frequency in Hertz. Set frequency at 25 kHz
 #define LEDC_INT_ENA_REG        (0x3FF59188) // enable interrupt bit 
 #define LEDC_INT_CLR_REG        (0x3FF5918C) // clear interrupt bit 
 
