@@ -8246,7 +8246,7 @@ LOAD c:/users/15148/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch5-8.4.0/xt
                 0x0000000000000010                _esp_flash_mmap_prefetch_pad_size = 0x10
                 0x0000000000000000                _esp_memprot_prefetch_pad_size = 0x0
                 0x0000000000000000                _esp_memprot_align_size = 0x0
-                0x000000003ffbe908                _static_data_end = _bss_end
+                0x000000003ffc2788                _static_data_end = _bss_end
                 0x0000000040000000                _heap_end = 0x40000000
                 0x000000003ff80000                _data_seg_org = ORIGIN (rtc_data_seg)
                 0x0000000000000001                ASSERT ((_rodata_start == ORIGIN (default_rodata_seg)), .flash.appdesc section must be placed at the beginning of the rodata segment.)
@@ -11424,7 +11424,7 @@ LOAD c:/users/15148/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch5-8.4.0/xt
                 0x000000004008bc08                xt_ints_on
                 0x000000004008bc20                xt_ints_off
 
-.dram0.data     0x000000003ffb0000     0xdfbc
+.dram0.data     0x000000003ffb0000    0x11e3c
                 0x000000003ffb0000                _data_start = ABSOLUTE (.)
  *(.gnu.linkonce.d.*)
  *(.data1)
@@ -11494,288 +11494,288 @@ LOAD c:/users/15148/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch5-8.4.0/xt
                 0x000000003ffb11d0        0x8 esp-idf/newlib/libnewlib.a(locks.c.obj)
  .data.s_stub_table
                 0x000000003ffb11d8       0x90 esp-idf/newlib/libnewlib.a(newlib_init.c.obj)
- .data.dutyArr  0x000000003ffb1268     0xbb82 esp-idf/main/libmain.a(pwm_generate_main.c.obj)
+ .data.dutyArr  0x000000003ffb1268     0xfa02 esp-idf/main/libmain.a(pwm_generate_main.c.obj)
                 0x000000003ffb1268                dutyArr
- *fill*         0x000000003ffbcdea        0x2 
+ *fill*         0x000000003ffc0c6a        0x2 
  .data.ESP_EFUSE_CHIP_VER_PKG
-                0x000000003ffbcdec        0xc esp-idf/efuse/libefuse.a(esp_efuse_table.c.obj)
-                0x000000003ffbcdec                ESP_EFUSE_CHIP_VER_PKG
+                0x000000003ffc0c6c        0xc esp-idf/efuse/libefuse.a(esp_efuse_table.c.obj)
+                0x000000003ffc0c6c                ESP_EFUSE_CHIP_VER_PKG
  .data.esp_ipc_isr_end_fl
-                0x000000003ffbcdf8        0x4 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
-                0x000000003ffbcdf8                esp_ipc_isr_end_fl
+                0x000000003ffc0c78        0x4 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
+                0x000000003ffc0c78                esp_ipc_isr_end_fl
  .data.s_ipc_isr_mux
-                0x000000003ffbcdfc        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
- .data          0x000000003ffbce04       0x10 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr_handler.S.obj)
+                0x000000003ffc0c7c        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
+ .data          0x000000003ffc0c84       0x10 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr_handler.S.obj)
  .data.ledc_spinlock
-                0x000000003ffbce14        0x8 esp-idf/driver/libdriver.a(ledc.c.obj)
+                0x000000003ffc0c94        0x8 esp-idf/driver/libdriver.a(ledc.c.obj)
  .data.periph_spinlock
-                0x000000003ffbce1c        0x8 esp-idf/driver/libdriver.a(periph_ctrl.c.obj)
+                0x000000003ffc0c9c        0x8 esp-idf/driver/libdriver.a(periph_ctrl.c.obj)
  .data.s_rtc_isr_handler_list_lock
-                0x000000003ffbce24        0x8 esp-idf/driver/libdriver.a(rtc_module.c.obj)
-                0x000000003ffbce24                s_rtc_isr_handler_list_lock
+                0x000000003ffc0ca4        0x8 esp-idf/driver/libdriver.a(rtc_module.c.obj)
+                0x000000003ffc0ca4                s_rtc_isr_handler_list_lock
  .data.uart_selectlock
-                0x000000003ffbce2c        0x8 esp-idf/driver/libdriver.a(uart.c.obj)
+                0x000000003ffc0cac        0x8 esp-idf/driver/libdriver.a(uart.c.obj)
  .data.uart_context
-                0x000000003ffbce34       0x30 esp-idf/driver/libdriver.a(uart.c.obj)
+                0x000000003ffc0cb4       0x30 esp-idf/driver/libdriver.a(uart.c.obj)
  .data.gpio_context
-                0x000000003ffbce64       0x18 esp-idf/driver/libdriver.a(gpio.c.obj)
+                0x000000003ffc0ce4       0x18 esp-idf/driver/libdriver.a(gpio.c.obj)
  .data._gpio_hal
-                0x000000003ffbce7c        0x8 esp-idf/driver/libdriver.a(gpio.c.obj)
+                0x000000003ffc0cfc        0x8 esp-idf/driver/libdriver.a(gpio.c.obj)
  .data.s_flash_op_cpu
-                0x000000003ffbce84        0x4 esp-idf/spi_flash/libspi_flash.a(cache_utils.c.obj)
+                0x000000003ffc0d04        0x4 esp-idf/spi_flash/libspi_flash.a(cache_utils.c.obj)
  .data.esp_flash_registered_chips
-                0x000000003ffbce88        0x4 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_drivers.c.obj)
-                0x000000003ffbce88                esp_flash_registered_chips
+                0x000000003ffc0d08        0x4 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_drivers.c.obj)
+                0x000000003ffc0d08                esp_flash_registered_chips
  .data.default_registered_chips
-                0x000000003ffbce8c       0x18 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_drivers.c.obj)
+                0x000000003ffc0d0c       0x18 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_drivers.c.obj)
  .data.reason_spinlock
-                0x000000003ffbcea4        0x8 esp-idf/esp_system/libesp_system.a(crosscore_int.c.obj)
+                0x000000003ffc0d24        0x8 esp-idf/esp_system/libesp_system.a(crosscore_int.c.obj)
  .data.twdt_spinlock
-                0x000000003ffbceac        0x8 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
+                0x000000003ffc0d2c        0x8 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
  .data.periph_spinlock
-                0x000000003ffbceb4        0x8 esp-idf/esp_hw_support/libesp_hw_support.a(clk_ctrl_os.c.obj)
- .data          0x000000003ffbcebc        0x4 c:/users/15148/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch5-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/lib/no-rtti\libc.a(lib_a-locale.o)
-                0x000000003ffbcebc                __global_locale_ptr
+                0x000000003ffc0d34        0x8 esp-idf/esp_hw_support/libesp_hw_support.a(clk_ctrl_os.c.obj)
+ .data          0x000000003ffc0d3c        0x4 c:/users/15148/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch5-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/lib/no-rtti\libc.a(lib_a-locale.o)
+                0x000000003ffc0d3c                __global_locale_ptr
  *(.dram1 .dram1.*)
- .dram1.26      0x000000003ffbcec0        0x4 esp-idf/freertos/libfreertos.a(FreeRTOS-openocd.c.obj)
-                0x000000003ffbcec0                uxTopUsedPriority
- .dram1.40      0x000000003ffbcec4       0x18 esp-idf/spi_flash/libspi_flash.a(flash_ops.c.obj)
-                0x000000003ffbcec4                g_flash_guard_default_ops
- .dram1.27      0x000000003ffbcedc        0x4 esp-idf/spi_flash/libspi_flash.a(esp_flash_api.c.obj)
-                0x000000003ffbcedc                rom_spiflash_api_funcs
- .dram1.26      0x000000003ffbcee0       0x10 esp-idf/spi_flash/libspi_flash.a(esp_flash_api.c.obj)
- .dram1.28      0x000000003ffbcef0       0x20 esp-idf/spi_flash/libspi_flash.a(esp_flash_spi_init.c.obj)
- .dram1.27      0x000000003ffbcf10       0x28 esp-idf/spi_flash/libspi_flash.a(esp_flash_spi_init.c.obj)
- .dram1.45      0x000000003ffbcf38       0x24 esp-idf/spi_flash/libspi_flash.a(spi_flash_os_func_app.c.obj)
- .dram1.44      0x000000003ffbcf5c       0x10 esp-idf/spi_flash/libspi_flash.a(spi_flash_os_func_app.c.obj)
- .dram1.13      0x000000003ffbcf6c       0x24 esp-idf/spi_flash/libspi_flash.a(spi_flash_os_func_noos.c.obj)
-                0x000000003ffbcf6c                esp_flash_noos_functions
- .dram1.8       0x000000003ffbcf90       0x14 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
-                0x000000003ffbcf90                spi_flash_chip_generic_timeout
- .dram1.7       0x000000003ffbcfa4        0x4 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
-                0x000000003ffbcfa4                rom_flash_chip_dummy_hpm
- .dram1.6       0x000000003ffbcfa8        0x4 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
-                0x000000003ffbcfa8                rom_flash_chip_dummy
- .dram1.5       0x000000003ffbcfac       0x18 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
- .dram1.4       0x000000003ffbcfc4        0x6 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
- *fill*         0x000000003ffbcfca        0x2 
- .dram1.3       0x000000003ffbcfcc        0x6 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
- *fill*         0x000000003ffbcfd2        0x2 
- .dram1.19      0x000000003ffbcfd4       0x58 esp-idf/spi_flash/libspi_flash.a(memspi_host_driver.c.obj)
- .dram1.32      0x000000003ffbd02c       0x19 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
- *fill*         0x000000003ffbd045        0x3 
- .dram1.31      0x000000003ffbd048        0x8 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
- .dram1.30      0x000000003ffbd050        0x6 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
- *fill*         0x000000003ffbd056        0x2 
- .dram1.29      0x000000003ffbd058        0x6 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
- *fill*         0x000000003ffbd05e        0x2 
- .dram1.0       0x000000003ffbd060       0x28 esp-idf/soc/libsoc.a(gpio_periph.c.obj)
-                0x000000003ffbd060                GPIO_PIN_MUX_REG_OFFSET
-                0x000000003ffbd088                _coredump_dram_start = ABSOLUTE (.)
+ .dram1.26      0x000000003ffc0d40        0x4 esp-idf/freertos/libfreertos.a(FreeRTOS-openocd.c.obj)
+                0x000000003ffc0d40                uxTopUsedPriority
+ .dram1.40      0x000000003ffc0d44       0x18 esp-idf/spi_flash/libspi_flash.a(flash_ops.c.obj)
+                0x000000003ffc0d44                g_flash_guard_default_ops
+ .dram1.27      0x000000003ffc0d5c        0x4 esp-idf/spi_flash/libspi_flash.a(esp_flash_api.c.obj)
+                0x000000003ffc0d5c                rom_spiflash_api_funcs
+ .dram1.26      0x000000003ffc0d60       0x10 esp-idf/spi_flash/libspi_flash.a(esp_flash_api.c.obj)
+ .dram1.28      0x000000003ffc0d70       0x20 esp-idf/spi_flash/libspi_flash.a(esp_flash_spi_init.c.obj)
+ .dram1.27      0x000000003ffc0d90       0x28 esp-idf/spi_flash/libspi_flash.a(esp_flash_spi_init.c.obj)
+ .dram1.45      0x000000003ffc0db8       0x24 esp-idf/spi_flash/libspi_flash.a(spi_flash_os_func_app.c.obj)
+ .dram1.44      0x000000003ffc0ddc       0x10 esp-idf/spi_flash/libspi_flash.a(spi_flash_os_func_app.c.obj)
+ .dram1.13      0x000000003ffc0dec       0x24 esp-idf/spi_flash/libspi_flash.a(spi_flash_os_func_noos.c.obj)
+                0x000000003ffc0dec                esp_flash_noos_functions
+ .dram1.8       0x000000003ffc0e10       0x14 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+                0x000000003ffc0e10                spi_flash_chip_generic_timeout
+ .dram1.7       0x000000003ffc0e24        0x4 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+                0x000000003ffc0e24                rom_flash_chip_dummy_hpm
+ .dram1.6       0x000000003ffc0e28        0x4 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+                0x000000003ffc0e28                rom_flash_chip_dummy
+ .dram1.5       0x000000003ffc0e2c       0x18 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+ .dram1.4       0x000000003ffc0e44        0x6 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+ *fill*         0x000000003ffc0e4a        0x2 
+ .dram1.3       0x000000003ffc0e4c        0x6 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+ *fill*         0x000000003ffc0e52        0x2 
+ .dram1.19      0x000000003ffc0e54       0x58 esp-idf/spi_flash/libspi_flash.a(memspi_host_driver.c.obj)
+ .dram1.32      0x000000003ffc0eac       0x19 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
+ *fill*         0x000000003ffc0ec5        0x3 
+ .dram1.31      0x000000003ffc0ec8        0x8 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
+ .dram1.30      0x000000003ffc0ed0        0x6 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
+ *fill*         0x000000003ffc0ed6        0x2 
+ .dram1.29      0x000000003ffc0ed8        0x6 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
+ *fill*         0x000000003ffc0ede        0x2 
+ .dram1.0       0x000000003ffc0ee0       0x28 esp-idf/soc/libsoc.a(gpio_periph.c.obj)
+                0x000000003ffc0ee0                GPIO_PIN_MUX_REG_OFFSET
+                0x000000003ffc0f08                _coredump_dram_start = ABSOLUTE (.)
  *(.dram2.coredump .dram2.coredump.*)
-                0x000000003ffbd088                _coredump_dram_end = ABSOLUTE (.)
+                0x000000003ffc0f08                _coredump_dram_end = ABSOLUTE (.)
  *libapp_trace.a:app_trace.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libapp_trace.a:app_trace_util.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
-                0x000000003ffbd088                . = ALIGN (0x4)
-                0x000000003ffbd088                _bt_data_start = ABSOLUTE (.)
+                0x000000003ffc0f08                . = ALIGN (0x4)
+                0x000000003ffc0f08                _bt_data_start = ABSOLUTE (.)
  *libbt.a:(.data .data.*)
-                0x000000003ffbd088                . = ALIGN (0x4)
-                0x000000003ffbd088                _bt_data_end = ABSOLUTE (.)
-                0x000000003ffbd088                . = ALIGN (0x4)
-                0x000000003ffbd088                _btdm_data_start = ABSOLUTE (.)
+                0x000000003ffc0f08                . = ALIGN (0x4)
+                0x000000003ffc0f08                _bt_data_end = ABSOLUTE (.)
+                0x000000003ffc0f08                . = ALIGN (0x4)
+                0x000000003ffc0f08                _btdm_data_start = ABSOLUTE (.)
  *libbtdm_app.a:(.data .data.*)
-                0x000000003ffbd088                . = ALIGN (0x4)
-                0x000000003ffbd088                _btdm_data_end = ABSOLUTE (.)
+                0x000000003ffc0f08                . = ALIGN (0x4)
+                0x000000003ffc0f08                _btdm_data_end = ABSOLUTE (.)
  *libesp_hw_support.a:rtc_clk.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  .rodata.rtc_clk_cpu_freq_to_config.str1.4
-                0x000000003ffbd088       0x3c esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.obj)
+                0x000000003ffc0f08       0x3c esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.obj)
  .rodata.rtc_clk_cpu_freq_get_config.str1.4
-                0x000000003ffbd0c4       0x3b esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.obj)
- *fill*         0x000000003ffbd0ff        0x1 
+                0x000000003ffc0f44       0x3b esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.obj)
+ *fill*         0x000000003ffc0f7f        0x1 
  .rodata.rtc_clk_cpu_freq_to_pll_mhz.str1.4
-                0x000000003ffbd100       0x29 esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.obj)
+                0x000000003ffc0f80       0x29 esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.obj)
  *libesp_system.a:esp_err.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
- *fill*         0x000000003ffbd129        0x3 
+ *fill*         0x000000003ffc0fa9        0x3 
  .rodata.esp_error_check_failed_print.str1.4
-                0x000000003ffbd12c       0x5c esp-idf/esp_system/libesp_system.a(esp_err.c.obj)
+                0x000000003ffc0fac       0x5c esp-idf/esp_system/libesp_system.a(esp_err.c.obj)
  .rodata._esp_error_check_failed.str1.4
-                0x000000003ffbd188       0x10 esp-idf/esp_system/libesp_system.a(esp_err.c.obj)
+                0x000000003ffc1008       0x10 esp-idf/esp_system/libesp_system.a(esp_err.c.obj)
  *libesp_system.a:ubsan.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libgcov.a:(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libhal.a:cpu_hal.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libhal.a:i2c_hal_iram.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libhal.a:ledc_hal_iram.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libhal.a:soc_hal.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
- .rodata        0x000000003ffbd198       0x18 esp-idf/hal/libhal.a(soc_hal.c.obj)
+ .rodata        0x000000003ffc1018       0x18 esp-idf/hal/libhal.a(soc_hal.c.obj)
  *libhal.a:spi_flash_encrypt_hal_iram.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  .rodata.spi_flash_encryption_hal_prepare.str1.4
-                0x000000003ffbd1b0       0xe3 esp-idf/hal/libhal.a(spi_flash_encrypt_hal_iram.c.obj)
- *fill*         0x000000003ffbd293        0x1 
+                0x000000003ffc1030       0xe3 esp-idf/hal/libhal.a(spi_flash_encrypt_hal_iram.c.obj)
+ *fill*         0x000000003ffc1113        0x1 
  .rodata.__func__$2888
-                0x000000003ffbd294       0x24 esp-idf/hal/libhal.a(spi_flash_encrypt_hal_iram.c.obj)
+                0x000000003ffc1114       0x24 esp-idf/hal/libhal.a(spi_flash_encrypt_hal_iram.c.obj)
  *libhal.a:spi_flash_hal_iram.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libhal.a:spi_hal_iram.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libhal.a:spi_slave_hal_iram.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libhal.a:wdt_hal_iram.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libheap.a:heap_tlsf.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  .rodata.default_walker.str1.4
-                0x000000003ffbd2b8       0x26 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbd2de        0x2 
+                0x000000003ffc1138       0x26 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc115e        0x2 
  .rodata.control_construct.str1.4
-                0x000000003ffbd2e0       0xe9 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbd3c9        0x3 
+                0x000000003ffc1160       0xe9 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc1249        0x3 
  .rodata.tlsf_add_pool.str1.4
-                0x000000003ffbd3cc      0x142 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbd50e        0x2 
+                0x000000003ffc124c      0x142 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc138e        0x2 
  .rodata.tlsf_remove_pool.str1.4
-                0x000000003ffbd510      0x116 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbd626        0x2 
+                0x000000003ffc1390      0x116 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc14a6        0x2 
  .rodata.tlsf_create.str1.4
-                0x000000003ffbd628       0x32 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbd65a        0x2 
+                0x000000003ffc14a8       0x32 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc14da        0x2 
  .rodata.tlsf_malloc.str1.4
-                0x000000003ffbd65c      0x1a7 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbd803        0x1 
+                0x000000003ffc14dc      0x1a7 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc1683        0x1 
  .rodata.tlsf_free.str1.4
-                0x000000003ffbd804      0x148 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+                0x000000003ffc1684      0x148 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
  .rodata.tlsf_realloc.str1.4
-                0x000000003ffbd94c       0x2e esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbd97a        0x2 
+                0x000000003ffc17cc       0x2e esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc17fa        0x2 
  .rodata.__func__$3689
-                0x000000003ffbd97c       0x10 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+                0x000000003ffc17fc       0x10 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
  .rodata.__func__$3899
-                0x000000003ffbd98c        0xd esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbd999        0x3 
+                0x000000003ffc180c        0xd esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc1819        0x3 
  .rodata.__func__$3676
-                0x000000003ffbd99c       0x11 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbd9ad        0x3 
+                0x000000003ffc181c       0x11 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc182d        0x3 
  .rodata.__func__$3664
-                0x000000003ffbd9b0        0xd esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbd9bd        0x3 
+                0x000000003ffc1830        0xd esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc183d        0x3 
  .rodata.__func__$3670
-                0x000000003ffbd9c0       0x11 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbd9d1        0x3 
+                0x000000003ffc1840       0x11 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc1851        0x3 
  .rodata.__func__$3886
-                0x000000003ffbd9d4        0xa esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbd9de        0x2 
+                0x000000003ffc1854        0xa esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc185e        0x2 
  .rodata.__func__$3659
-                0x000000003ffbd9e0        0xc esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+                0x000000003ffc1860        0xc esp-idf/heap/libheap.a(heap_tlsf.c.obj)
  .rodata.__func__$3682
-                0x000000003ffbd9ec       0x10 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+                0x000000003ffc186c       0x10 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
  .rodata.__func__$3711
-                0x000000003ffbd9fc       0x13 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbda0f        0x1 
+                0x000000003ffc187c       0x13 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc188f        0x1 
  .rodata.__func__$3619
-                0x000000003ffbda10       0x16 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbda26        0x2 
+                0x000000003ffc1890       0x16 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc18a6        0x2 
  .rodata.__func__$3704
-                0x000000003ffbda28       0x12 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbda3a        0x2 
+                0x000000003ffc18a8       0x12 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc18ba        0x2 
  .rodata.__func__$3716
-                0x000000003ffbda3c       0x12 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbda4e        0x2 
+                0x000000003ffc18bc       0x12 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc18ce        0x2 
  .rodata.__func__$3628
-                0x000000003ffbda50       0x12 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
- *fill*         0x000000003ffbda62        0x2 
+                0x000000003ffc18d0       0x12 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+ *fill*         0x000000003ffc18e2        0x2 
  .rodata.__func__$3636
-                0x000000003ffbda64       0x12 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
+                0x000000003ffc18e4       0x12 esp-idf/heap/libheap.a(heap_tlsf.c.obj)
  *libheap.a:multi_heap.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
- *fill*         0x000000003ffbda76        0x2 
+ *fill*         0x000000003ffc18f6        0x2 
  .rodata.assert_valid_block.str1.4
-                0x000000003ffbda78       0x32 esp-idf/heap/libheap.a(multi_heap.c.obj)
- *fill*         0x000000003ffbdaaa        0x2 
+                0x000000003ffc18f8       0x32 esp-idf/heap/libheap.a(multi_heap.c.obj)
+ *fill*         0x000000003ffc192a        0x2 
  .rodata.multi_heap_register_impl.str1.4
-                0x000000003ffbdaac       0x2e esp-idf/heap/libheap.a(multi_heap.c.obj)
- *fill*         0x000000003ffbdada        0x2 
+                0x000000003ffc192c       0x2e esp-idf/heap/libheap.a(multi_heap.c.obj)
+ *fill*         0x000000003ffc195a        0x2 
  .rodata.multi_heap_get_first_block.str1.4
-                0x000000003ffbdadc        0xd esp-idf/heap/libheap.a(multi_heap.c.obj)
- *fill*         0x000000003ffbdae9        0x3 
+                0x000000003ffc195c        0xd esp-idf/heap/libheap.a(multi_heap.c.obj)
+ *fill*         0x000000003ffc1969        0x3 
  .rodata.__func__$5273
-                0x000000003ffbdaec       0x18 esp-idf/heap/libheap.a(multi_heap.c.obj)
+                0x000000003ffc196c       0x18 esp-idf/heap/libheap.a(multi_heap.c.obj)
  .rodata.__func__$5231
-                0x000000003ffbdb04       0x19 esp-idf/heap/libheap.a(multi_heap.c.obj)
+                0x000000003ffc1984       0x19 esp-idf/heap/libheap.a(multi_heap.c.obj)
  *libnewlib.a:abort.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
- *fill*         0x000000003ffbdb1d        0x3 
+ *fill*         0x000000003ffc199d        0x3 
  .rodata.abort.str1.4
-                0x000000003ffbdb20       0x26 esp-idf/newlib/libnewlib.a(abort.c.obj)
+                0x000000003ffc19a0       0x26 esp-idf/newlib/libnewlib.a(abort.c.obj)
  *libnewlib.a:assert.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
- *fill*         0x000000003ffbdb46        0x2 
+ *fill*         0x000000003ffc19c6        0x2 
  .rodata.__assert_func.str1.4
-                0x000000003ffbdb48       0x2f esp-idf/newlib/libnewlib.a(assert.c.obj)
+                0x000000003ffc19c8       0x2f esp-idf/newlib/libnewlib.a(assert.c.obj)
                                          0x36 (size before relaxing)
  *libnewlib.a:heap.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libnewlib.a:stdatomic.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
-                0x000000003ffbdb78                . = ALIGN (0x4)
- *fill*         0x000000003ffbdb77        0x1 
-                0x000000003ffbdb78                _nimble_data_start = ABSOLUTE (.)
+                0x000000003ffc19f8                . = ALIGN (0x4)
+ *fill*         0x000000003ffc19f7        0x1 
+                0x000000003ffc19f8                _nimble_data_start = ABSOLUTE (.)
  *libnimble.a:(.data .data.*)
-                0x000000003ffbdb78                . = ALIGN (0x4)
-                0x000000003ffbdb78                _nimble_data_end = ABSOLUTE (.)
+                0x000000003ffc19f8                . = ALIGN (0x4)
+                0x000000003ffc19f8                _nimble_data_end = ABSOLUTE (.)
  *libphy.a:(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libsoc.a:lldesc.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libspi_flash.a:memspi_host_driver.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  .rodata.memspi_host_read_id_hs.str1.4
-                0x000000003ffbdb78       0x24 esp-idf/spi_flash/libspi_flash.a(memspi_host_driver.c.obj)
- .rodata.TAG    0x000000003ffbdb9c        0x7 esp-idf/spi_flash/libspi_flash.a(memspi_host_driver.c.obj)
+                0x000000003ffc19f8       0x24 esp-idf/spi_flash/libspi_flash.a(memspi_host_driver.c.obj)
+ .rodata.TAG    0x000000003ffc1a1c        0x7 esp-idf/spi_flash/libspi_flash.a(memspi_host_driver.c.obj)
  *libspi_flash.a:spi_flash_chip_boya.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libspi_flash.a:spi_flash_chip_gd.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
- *fill*         0x000000003ffbdba3        0x1 
+ *fill*         0x000000003ffc1a23        0x1 
  .rodata.esp_flash_chip_gd
-                0x000000003ffbdba4       0x7c esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_gd.c.obj)
-                0x000000003ffbdba4                esp_flash_chip_gd
+                0x000000003ffc1a24       0x7c esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_gd.c.obj)
+                0x000000003ffc1a24                esp_flash_chip_gd
  .rodata.chip_name
-                0x000000003ffbdc20        0x3 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_gd.c.obj)
+                0x000000003ffc1aa0        0x3 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_gd.c.obj)
  *libspi_flash.a:spi_flash_chip_generic.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
- *fill*         0x000000003ffbdc23        0x1 
+ *fill*         0x000000003ffc1aa3        0x1 
  .rodata.spi_flash_chip_generic_read.str1.4
-                0x000000003ffbdc24       0x43 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
- *fill*         0x000000003ffbdc67        0x1 
+                0x000000003ffc1aa4       0x43 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+ *fill*         0x000000003ffc1ae7        0x1 
  .rodata.spi_flash_chip_generic_get_write_protect.str1.4
-                0x000000003ffbdc68       0x4b esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
- *fill*         0x000000003ffbdcb3        0x1 
+                0x000000003ffc1ae8       0x4b esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+ *fill*         0x000000003ffc1b33        0x1 
  .rodata.spi_flash_chip_generic_suspend_cmd_conf.str1.4
-                0x000000003ffbdcb4       0x5f esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
- *fill*         0x000000003ffbdd13        0x1 
+                0x000000003ffc1b34       0x5f esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+ *fill*         0x000000003ffc1b93        0x1 
  .rodata.spi_flash_chip_generic_read_unique_id.str1.4
-                0x000000003ffbdd14       0x52 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
- *fill*         0x000000003ffbdd66        0x2 
+                0x000000003ffc1b94       0x52 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+ *fill*         0x000000003ffc1be6        0x2 
  .rodata.__func__$4803
-                0x000000003ffbdd68       0x29 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
- *fill*         0x000000003ffbdd91        0x3 
+                0x000000003ffc1be8       0x29 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+ *fill*         0x000000003ffc1c11        0x3 
  .rodata.esp_flash_chip_generic
-                0x000000003ffbdd94       0x7c esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
-                0x000000003ffbdd94                esp_flash_chip_generic
+                0x000000003ffc1c14       0x7c esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+                0x000000003ffc1c14                esp_flash_chip_generic
  .rodata.chip_name
-                0x000000003ffbde10        0x8 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
- .rodata.TAG    0x000000003ffbde18        0xd esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+                0x000000003ffc1c90        0x8 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
+ .rodata.TAG    0x000000003ffc1c98        0xd esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_generic.c.obj)
  *libspi_flash.a:spi_flash_chip_issi.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
- *fill*         0x000000003ffbde25        0x3 
+ *fill*         0x000000003ffc1ca5        0x3 
  .rodata.esp_flash_chip_issi
-                0x000000003ffbde28       0x7c esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_issi.c.obj)
-                0x000000003ffbde28                esp_flash_chip_issi
+                0x000000003ffc1ca8       0x7c esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_issi.c.obj)
+                0x000000003ffc1ca8                esp_flash_chip_issi
  .rodata.chip_name
-                0x000000003ffbdea4        0x5 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_issi.c.obj)
+                0x000000003ffc1d24        0x5 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_issi.c.obj)
  *libspi_flash.a:spi_flash_chip_mxic.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
- *fill*         0x000000003ffbdea9        0x3 
+ *fill*         0x000000003ffc1d29        0x3 
  .rodata.esp_flash_chip_mxic
-                0x000000003ffbdeac       0x7c esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_mxic.c.obj)
-                0x000000003ffbdeac                esp_flash_chip_mxic
+                0x000000003ffc1d2c       0x7c esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_mxic.c.obj)
+                0x000000003ffc1d2c                esp_flash_chip_mxic
  .rodata.chip_name
-                0x000000003ffbdf28        0x5 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_mxic.c.obj)
+                0x000000003ffc1da8        0x5 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_mxic.c.obj)
  *libspi_flash.a:spi_flash_chip_th.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  *libspi_flash.a:spi_flash_chip_winbond.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
  .rodata.spi_flash_chip_winbond_read.str1.4
-                0x000000003ffbdf2d       0x43 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_winbond.c.obj)
- *fill*         0x000000003ffbdf2d        0x3 
+                0x000000003ffc1dad       0x43 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_winbond.c.obj)
+ *fill*         0x000000003ffc1dad        0x3 
  .rodata.esp_flash_chip_winbond
-                0x000000003ffbdf30       0x7c esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_winbond.c.obj)
-                0x000000003ffbdf30                esp_flash_chip_winbond
+                0x000000003ffc1db0       0x7c esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_winbond.c.obj)
+                0x000000003ffc1db0                esp_flash_chip_winbond
  .rodata.chip_name
-                0x000000003ffbdfac        0x8 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_winbond.c.obj)
- .rodata.TAG    0x000000003ffbdfb4        0x8 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_winbond.c.obj)
+                0x000000003ffc1e2c        0x8 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_winbond.c.obj)
+ .rodata.TAG    0x000000003ffc1e34        0x8 esp-idf/spi_flash/libspi_flash.a(spi_flash_chip_winbond.c.obj)
  *libspi_flash.a:spi_flash_rom_patch.*(.rodata .rodata.* .sdata2 .sdata2.* .srodata .srodata.*)
-                0x000000003ffbdfbc                _data_end = ABSOLUTE (.)
-                0x000000003ffbdfbc                . = ALIGN (0x4)
+                0x000000003ffc1e3c                _data_end = ABSOLUTE (.)
+                0x000000003ffc1e3c                . = ALIGN (0x4)
 
 .ext_ram_noinit
                 0x000000003f800000        0x0
@@ -11784,328 +11784,328 @@ LOAD c:/users/15148/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch5-8.4.0/xt
                 0x000000003f800000                . = ALIGN (0x4)
                 0x000000003f800000                _ext_ram_noinit_end = ABSOLUTE (.)
 
-.noinit         0x000000003ffbdfbc        0x0
-                0x000000003ffbdfbc                . = ALIGN (0x4)
-                0x000000003ffbdfbc                _noinit_start = ABSOLUTE (.)
+.noinit         0x000000003ffc1e3c        0x0
+                0x000000003ffc1e3c                . = ALIGN (0x4)
+                0x000000003ffc1e3c                _noinit_start = ABSOLUTE (.)
  *(.noinit .noinit.*)
-                0x000000003ffbdfbc                . = ALIGN (0x4)
-                0x000000003ffbdfbc                _noinit_end = ABSOLUTE (.)
+                0x000000003ffc1e3c                . = ALIGN (0x4)
+                0x000000003ffc1e3c                _noinit_end = ABSOLUTE (.)
 
 .ext_ram.bss    0x000000003f800000        0x0
                 0x000000003f800000                _ext_ram_bss_start = ABSOLUTE (.)
                 0x000000003f800000                . = ALIGN (0x4)
                 0x000000003f800000                _ext_ram_bss_end = ABSOLUTE (.)
 
-.dram0.bss      0x000000003ffbdfc0      0x948
-                0x000000003ffbdfc0                . = ALIGN (0x8)
-                0x000000003ffbdfc0                _bss_start = ABSOLUTE (.)
+.dram0.bss      0x000000003ffc1e40      0x948
+                0x000000003ffc1e40                . = ALIGN (0x8)
+                0x000000003ffc1e40                _bss_start = ABSOLUTE (.)
  *(EXCLUDE_FILE(*libnimble.a *libbtdm_app.a *libbt.a) .bss EXCLUDE_FILE(*libnimble.a *libbtdm_app.a *libbt.a) .bss.*)
  .bss.s_app_elf_sha256$3819
-                0x000000003ffbdfc0        0x8 esp-idf/app_update/libapp_update.a(esp_app_desc.c.obj)
+                0x000000003ffc1e40        0x8 esp-idf/app_update/libapp_update.a(esp_app_desc.c.obj)
  .bss.s_pthread_cfg_key
-                0x000000003ffbdfc8        0x4 esp-idf/pthread/libpthread.a(pthread.c.obj)
+                0x000000003ffc1e48        0x4 esp-idf/pthread/libpthread.a(pthread.c.obj)
  .bss.s_threads_mux
-                0x000000003ffbdfcc        0x4 esp-idf/pthread/libpthread.a(pthread.c.obj)
- .bss.s_keys    0x000000003ffbdfd0        0x4 esp-idf/pthread/libpthread.a(pthread_local_storage.c.obj)
-                0x000000003ffbdfd0                s_keys
+                0x000000003ffc1e4c        0x4 esp-idf/pthread/libpthread.a(pthread.c.obj)
+ .bss.s_keys    0x000000003ffc1e50        0x4 esp-idf/pthread/libpthread.a(pthread_local_storage.c.obj)
+                0x000000003ffc1e50                s_keys
  .bss.s_resume_cores
-                0x000000003ffbdfd4        0x1 esp-idf/esp_system/libesp_system.a(cpu_start.c.obj)
- *fill*         0x000000003ffbdfd5        0x3 
+                0x000000003ffc1e54        0x1 esp-idf/esp_system/libesp_system.a(cpu_start.c.obj)
+ *fill*         0x000000003ffc1e55        0x3 
  .bss.s_cpu_inited
-                0x000000003ffbdfd8        0x2 esp-idf/esp_system/libesp_system.a(cpu_start.c.obj)
- *fill*         0x000000003ffbdfda        0x2 
- .bss.s_cpu_up  0x000000003ffbdfdc        0x2 esp-idf/esp_system/libesp_system.a(cpu_start.c.obj)
+                0x000000003ffc1e58        0x2 esp-idf/esp_system/libesp_system.a(cpu_start.c.obj)
+ *fill*         0x000000003ffc1e5a        0x2 
+ .bss.s_cpu_up  0x000000003ffc1e5c        0x2 esp-idf/esp_system/libesp_system.a(cpu_start.c.obj)
  .bss.int_wdt_app_cpu_ticked
-                0x000000003ffbdfde        0x1 esp-idf/esp_system/libesp_system.a(int_wdt.c.obj)
-                0x000000003ffbdfde                int_wdt_app_cpu_ticked
- *fill*         0x000000003ffbdfdf        0x1 
+                0x000000003ffc1e5e        0x1 esp-idf/esp_system/libesp_system.a(int_wdt.c.obj)
+                0x000000003ffc1e5e                int_wdt_app_cpu_ticked
+ *fill*         0x000000003ffc1e5f        0x1 
  .bss.iwdt_context
-                0x000000003ffbdfe0        0x8 esp-idf/esp_system/libesp_system.a(int_wdt.c.obj)
+                0x000000003ffc1e60        0x8 esp-idf/esp_system/libesp_system.a(int_wdt.c.obj)
  .bss.shutdown_handlers
-                0x000000003ffbdfe8       0x14 esp-idf/esp_system/libesp_system.a(esp_system.c.obj)
+                0x000000003ffc1e68       0x14 esp-idf/esp_system/libesp_system.a(esp_system.c.obj)
  .bss.s_system_full_inited
-                0x000000003ffbdffc        0x1 esp-idf/esp_system/libesp_system.a(startup.c.obj)
- *fill*         0x000000003ffbdffd        0x3 
+                0x000000003ffc1e7c        0x1 esp-idf/esp_system/libesp_system.a(startup.c.obj)
+ *fill*         0x000000003ffc1e7d        0x3 
  .bss.s_system_inited
-                0x000000003ffbe000        0x2 esp-idf/esp_system/libesp_system.a(startup.c.obj)
- *fill*         0x000000003ffbe002        0x6 
+                0x000000003ffc1e80        0x2 esp-idf/esp_system/libesp_system.a(startup.c.obj)
+ *fill*         0x000000003ffc1e82        0x6 
  .bss.g_startup_time
-                0x000000003ffbe008        0x8 esp-idf/esp_system/libesp_system.a(startup.c.obj)
-                0x000000003ffbe008                g_startup_time
+                0x000000003ffc1e88        0x8 esp-idf/esp_system/libesp_system.a(startup.c.obj)
+                0x000000003ffc1e88                g_startup_time
  .bss.g_exc_frames
-                0x000000003ffbe010        0x8 esp-idf/esp_system/libesp_system.a(panic_handler.c.obj)
-                0x000000003ffbe010                g_exc_frames
+                0x000000003ffc1e90        0x8 esp-idf/esp_system/libesp_system.a(panic_handler.c.obj)
+                0x000000003ffc1e90                g_exc_frames
  .bss.s_reset_reason
-                0x000000003ffbe018        0x4 esp-idf/esp_system/libesp_system.a(reset_reason.c.obj)
- .bss.tick_cb   0x000000003ffbe01c       0x40 esp-idf/esp_system/libesp_system.a(freertos_hooks.c.obj)
- .bss.idle_cb   0x000000003ffbe05c       0x40 esp-idf/esp_system/libesp_system.a(freertos_hooks.c.obj)
+                0x000000003ffc1e98        0x4 esp-idf/esp_system/libesp_system.a(reset_reason.c.obj)
+ .bss.tick_cb   0x000000003ffc1e9c       0x40 esp-idf/esp_system/libesp_system.a(freertos_hooks.c.obj)
+ .bss.idle_cb   0x000000003ffc1edc       0x40 esp-idf/esp_system/libesp_system.a(freertos_hooks.c.obj)
  .bss.s_panic_abort_details
-                0x000000003ffbe09c        0x4 esp-idf/esp_system/libesp_system.a(panic.c.obj)
+                0x000000003ffc1f1c        0x4 esp-idf/esp_system/libesp_system.a(panic.c.obj)
  .bss.g_panic_abort
-                0x000000003ffbe0a0        0x1 esp-idf/esp_system/libesp_system.a(panic.c.obj)
-                0x000000003ffbe0a0                g_panic_abort
- *fill*         0x000000003ffbe0a1        0x3 
+                0x000000003ffc1f20        0x1 esp-idf/esp_system/libesp_system.a(panic.c.obj)
+                0x000000003ffc1f20                g_panic_abort
+ *fill*         0x000000003ffc1f21        0x3 
  .bss.s_fd_table_lock
-                0x000000003ffbe0a4        0x4 esp-idf/vfs/libvfs.a(vfs.c.obj)
+                0x000000003ffc1f24        0x4 esp-idf/vfs/libvfs.a(vfs.c.obj)
  .bss.s_vfs_count
-                0x000000003ffbe0a8        0x4 esp-idf/vfs/libvfs.a(vfs.c.obj)
- .bss.s_vfs     0x000000003ffbe0ac       0x20 esp-idf/vfs/libvfs.a(vfs.c.obj)
+                0x000000003ffc1f28        0x4 esp-idf/vfs/libvfs.a(vfs.c.obj)
+ .bss.s_vfs     0x000000003ffc1f2c       0x20 esp-idf/vfs/libvfs.a(vfs.c.obj)
  .bss.vfs_console
-                0x000000003ffbe0cc        0x8 esp-idf/vfs/libvfs.a(vfs_console.c.obj)
+                0x000000003ffc1f4c        0x8 esp-idf/vfs/libvfs.a(vfs_console.c.obj)
  .bss.primary_vfs_index
-                0x000000003ffbe0d4        0x4 esp-idf/vfs/libvfs.a(vfs_console.c.obj)
+                0x000000003ffc1f54        0x4 esp-idf/vfs/libvfs.a(vfs_console.c.obj)
  .bss.s_registered_select_num
-                0x000000003ffbe0d8        0x4 esp-idf/vfs/libvfs.a(vfs_uart.c.obj)
+                0x000000003ffc1f58        0x4 esp-idf/vfs/libvfs.a(vfs_uart.c.obj)
  .bss.s_registered_selects
-                0x000000003ffbe0dc        0x4 esp-idf/vfs/libvfs.a(vfs_uart.c.obj)
+                0x000000003ffc1f5c        0x4 esp-idf/vfs/libvfs.a(vfs_uart.c.obj)
  .bss.s_log_cache_misses
-                0x000000003ffbe0e0        0x4 esp-idf/log/liblog.a(log.c.obj)
+                0x000000003ffc1f60        0x4 esp-idf/log/liblog.a(log.c.obj)
  .bss.s_log_cache_entry_count
-                0x000000003ffbe0e4        0x4 esp-idf/log/liblog.a(log.c.obj)
+                0x000000003ffc1f64        0x4 esp-idf/log/liblog.a(log.c.obj)
  .bss.s_log_cache_max_generation
-                0x000000003ffbe0e8        0x4 esp-idf/log/liblog.a(log.c.obj)
+                0x000000003ffc1f68        0x4 esp-idf/log/liblog.a(log.c.obj)
  .bss.s_log_cache
-                0x000000003ffbe0ec       0xf8 esp-idf/log/liblog.a(log.c.obj)
+                0x000000003ffc1f6c       0xf8 esp-idf/log/liblog.a(log.c.obj)
  .bss.s_log_tags
-                0x000000003ffbe1e4        0x4 esp-idf/log/liblog.a(log.c.obj)
+                0x000000003ffc2064        0x4 esp-idf/log/liblog.a(log.c.obj)
  .bss.base$5635
-                0x000000003ffbe1e8        0x4 esp-idf/log/liblog.a(log_freertos.c.obj)
+                0x000000003ffc2068        0x4 esp-idf/log/liblog.a(log_freertos.c.obj)
  .bss.s_log_mutex
-                0x000000003ffbe1ec        0x4 esp-idf/log/liblog.a(log_freertos.c.obj)
+                0x000000003ffc206c        0x4 esp-idf/log/liblog.a(log_freertos.c.obj)
  .bss.alloc_failed_callback
-                0x000000003ffbe1f0        0x4 esp-idf/heap/libheap.a(heap_caps.c.obj)
+                0x000000003ffc2070        0x4 esp-idf/heap/libheap.a(heap_caps.c.obj)
  .bss.non_iram_int_disabled_flag
-                0x000000003ffbe1f4        0x2 esp-idf/esp_hw_support/libesp_hw_support.a(intr_alloc.c.obj)
- *fill*         0x000000003ffbe1f6        0x2 
+                0x000000003ffc2074        0x2 esp-idf/esp_hw_support/libesp_hw_support.a(intr_alloc.c.obj)
+ *fill*         0x000000003ffc2076        0x2 
  .bss.non_iram_int_disabled
-                0x000000003ffbe1f8        0x8 esp-idf/esp_hw_support/libesp_hw_support.a(intr_alloc.c.obj)
+                0x000000003ffc2078        0x8 esp-idf/esp_hw_support/libesp_hw_support.a(intr_alloc.c.obj)
  .bss.non_iram_int_mask
-                0x000000003ffbe200        0x8 esp-idf/esp_hw_support/libesp_hw_support.a(intr_alloc.c.obj)
+                0x000000003ffc2080        0x8 esp-idf/esp_hw_support/libesp_hw_support.a(intr_alloc.c.obj)
  .bss.vector_desc_head
-                0x000000003ffbe208        0x4 esp-idf/esp_hw_support/libesp_hw_support.a(intr_alloc.c.obj)
+                0x000000003ffc2088        0x4 esp-idf/esp_hw_support/libesp_hw_support.a(intr_alloc.c.obj)
  .bss.s_cur_pll_freq
-                0x000000003ffbe20c        0x4 esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.obj)
+                0x000000003ffc208c        0x4 esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.obj)
  .bss.s_timer_task
-                0x000000003ffbe210        0x4 esp-idf/esp_timer/libesp_timer.a(esp_timer.c.obj)
- .bss.s_timers  0x000000003ffbe214        0x4 esp-idf/esp_timer/libesp_timer.a(esp_timer.c.obj)
+                0x000000003ffc2090        0x4 esp-idf/esp_timer/libesp_timer.a(esp_timer.c.obj)
+ .bss.s_timers  0x000000003ffc2094        0x4 esp-idf/esp_timer/libesp_timer.a(esp_timer.c.obj)
  .bss.s_correction_us
-                0x000000003ffbe218        0x8 esp-idf/esp_timer/libesp_timer.a(system_time.c.obj)
+                0x000000003ffc2098        0x8 esp-idf/esp_timer/libesp_timer.a(system_time.c.obj)
  .bss.s_alarm_handler
-                0x000000003ffbe220        0x4 esp-idf/esp_timer/libesp_timer.a(esp_timer_impl_lac.c.obj)
+                0x000000003ffc20a0        0x4 esp-idf/esp_timer/libesp_timer.a(esp_timer_impl_lac.c.obj)
  .bss.s_timer_interrupt_handle
-                0x000000003ffbe224        0x4 esp-idf/esp_timer/libesp_timer.a(esp_timer_impl_lac.c.obj)
+                0x000000003ffc20a4        0x4 esp-idf/esp_timer/libesp_timer.a(esp_timer_impl_lac.c.obj)
  .bss.port_uxOldInterruptState
-                0x000000003ffbe228        0x8 esp-idf/freertos/libfreertos.a(port.c.obj)
-                0x000000003ffbe228                port_uxOldInterruptState
+                0x000000003ffc20a8        0x8 esp-idf/freertos/libfreertos.a(port.c.obj)
+                0x000000003ffc20a8                port_uxOldInterruptState
  .bss.port_uxCriticalNesting
-                0x000000003ffbe230        0x8 esp-idf/freertos/libfreertos.a(port.c.obj)
-                0x000000003ffbe230                port_uxCriticalNesting
+                0x000000003ffc20b0        0x8 esp-idf/freertos/libfreertos.a(port.c.obj)
+                0x000000003ffc20b0                port_uxCriticalNesting
  .bss.port_interruptNesting
-                0x000000003ffbe238        0x8 esp-idf/freertos/libfreertos.a(port.c.obj)
-                0x000000003ffbe238                port_interruptNesting
+                0x000000003ffc20b8        0x8 esp-idf/freertos/libfreertos.a(port.c.obj)
+                0x000000003ffc20b8                port_interruptNesting
  .bss._xt_tick_divisor
-                0x000000003ffbe240        0x4 esp-idf/freertos/libfreertos.a(xtensa_init.c.obj)
-                0x000000003ffbe240                _xt_tick_divisor
+                0x000000003ffc20c0        0x4 esp-idf/freertos/libfreertos.a(xtensa_init.c.obj)
+                0x000000003ffc20c0                _xt_tick_divisor
  .bss.s_other_cpu_startup_done
-                0x000000003ffbe244        0x1 esp-idf/freertos/libfreertos.a(port_common.c.obj)
- *fill*         0x000000003ffbe245        0x3 
+                0x000000003ffc20c4        0x1 esp-idf/freertos/libfreertos.a(port_common.c.obj)
+ *fill*         0x000000003ffc20c5        0x3 
  .bss.port_xSchedulerRunning
-                0x000000003ffbe248        0x8 esp-idf/freertos/libfreertos.a(port_common.c.obj)
-                0x000000003ffbe248                port_xSchedulerRunning
+                0x000000003ffc20c8        0x8 esp-idf/freertos/libfreertos.a(port_common.c.obj)
+                0x000000003ffc20c8                port_xSchedulerRunning
  .bss.xSwitchingContext
-                0x000000003ffbe250        0x8 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc20d0        0x8 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.uxSchedulerSuspended
-                0x000000003ffbe258        0x8 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc20d8        0x8 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.xIdleTaskHandle
-                0x000000003ffbe260        0x8 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc20e0        0x8 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.xNextTaskUnblockTime
-                0x000000003ffbe268        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc20e8        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.uxTaskNumber
-                0x000000003ffbe26c        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc20ec        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.xNumOfOverflows
-                0x000000003ffbe270        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc20f0        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.xYieldPending
-                0x000000003ffbe274        0x8 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc20f4        0x8 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.xPendedTicks
-                0x000000003ffbe27c        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc20fc        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.xSchedulerRunning
-                0x000000003ffbe280        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc2100        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.uxTopReadyPriority
-                0x000000003ffbe284        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc2104        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.xTickCount
-                0x000000003ffbe288        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc2108        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.uxCurrentNumberOfTasks
-                0x000000003ffbe28c        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc210c        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.xSuspendedTaskList
-                0x000000003ffbe290       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc2110       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.uxDeletedTasksWaitingCleanUp
-                0x000000003ffbe2a4        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc2124        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.xTasksWaitingTermination
-                0x000000003ffbe2a8       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc2128       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.xPendingReadyList
-                0x000000003ffbe2bc       0x28 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc213c       0x28 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.pxOverflowDelayedTaskList
-                0x000000003ffbe2e4        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc2164        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.pxDelayedTaskList
-                0x000000003ffbe2e8        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc2168        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.xDelayedTaskList2
-                0x000000003ffbe2ec       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc216c       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.xDelayedTaskList1
-                0x000000003ffbe300       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc2180       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.pxReadyTasksLists
-                0x000000003ffbe314      0x1f4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc2194      0x1f4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
  .bss.pxCurrentTCB
-                0x000000003ffbe508        0x8 esp-idf/freertos/libfreertos.a(tasks.c.obj)
-                0x000000003ffbe508                pxCurrentTCB
+                0x000000003ffc2388        0x8 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x000000003ffc2388                pxCurrentTCB
  .bss.s_common_recursive_mutex
-                0x000000003ffbe510       0x54 esp-idf/newlib/libnewlib.a(locks.c.obj)
-                0x000000003ffbe510                __lock___env_recursive_mutex
-                0x000000003ffbe510                __lock___sinit_recursive_mutex
-                0x000000003ffbe510                __lock___malloc_recursive_mutex
-                0x000000003ffbe510                __lock___sfp_recursive_mutex
-                0x000000003ffbe510                __lock___atexit_recursive_mutex
+                0x000000003ffc2390       0x54 esp-idf/newlib/libnewlib.a(locks.c.obj)
+                0x000000003ffc2390                __lock___env_recursive_mutex
+                0x000000003ffc2390                __lock___sinit_recursive_mutex
+                0x000000003ffc2390                __lock___malloc_recursive_mutex
+                0x000000003ffc2390                __lock___sfp_recursive_mutex
+                0x000000003ffc2390                __lock___atexit_recursive_mutex
  .bss.s_common_mutex
-                0x000000003ffbe564       0x54 esp-idf/newlib/libnewlib.a(locks.c.obj)
-                0x000000003ffbe564                __lock___at_quick_exit_mutex
-                0x000000003ffbe564                __lock___dd_hash_mutex
-                0x000000003ffbe564                __lock___tz_mutex
-                0x000000003ffbe564                __lock___arc4random_mutex
- .bss.s_reent   0x000000003ffbe5b8       0xf0 esp-idf/newlib/libnewlib.a(newlib_init.c.obj)
+                0x000000003ffc23e4       0x54 esp-idf/newlib/libnewlib.a(locks.c.obj)
+                0x000000003ffc23e4                __lock___at_quick_exit_mutex
+                0x000000003ffc23e4                __lock___dd_hash_mutex
+                0x000000003ffc23e4                __lock___tz_mutex
+                0x000000003ffc23e4                __lock___arc4random_mutex
+ .bss.s_reent   0x000000003ffc2438       0xf0 esp-idf/newlib/libnewlib.a(newlib_init.c.obj)
  .bss.s_time_lock
-                0x000000003ffbe6a8        0x4 esp-idf/newlib/libnewlib.a(time.c.obj)
- *fill*         0x000000003ffbe6ac        0x4 
+                0x000000003ffc2528        0x4 esp-idf/newlib/libnewlib.a(time.c.obj)
+ *fill*         0x000000003ffc252c        0x4 
  .bss.s_adjtime_total_correction_us
-                0x000000003ffbe6b0        0x8 esp-idf/newlib/libnewlib.a(time.c.obj)
+                0x000000003ffc2530        0x8 esp-idf/newlib/libnewlib.a(time.c.obj)
  .bss.s_adjtime_start_us
-                0x000000003ffbe6b8        0x8 esp-idf/newlib/libnewlib.a(time.c.obj)
+                0x000000003ffc2538        0x8 esp-idf/newlib/libnewlib.a(time.c.obj)
  .bss.s_boot_time_lock
-                0x000000003ffbe6c0        0x4 esp-idf/newlib/libnewlib.a(esp_time_impl.c.obj)
- *fill*         0x000000003ffbe6c4        0x4 
+                0x000000003ffc2540        0x4 esp-idf/newlib/libnewlib.a(esp_time_impl.c.obj)
+ *fill*         0x000000003ffc2544        0x4 
  .bss.s_microseconds_offset
-                0x000000003ffbe6c8        0x8 esp-idf/newlib/libnewlib.a(esp_time_impl.c.obj)
-                0x000000003ffbe6c8                s_microseconds_offset
+                0x000000003ffc2548        0x8 esp-idf/newlib/libnewlib.a(esp_time_impl.c.obj)
+                0x000000003ffc2548                s_microseconds_offset
  .bss.fiveSecCnt
-                0x000000003ffbe6d0        0x4 esp-idf/main/libmain.a(pwm_generate_main.c.obj)
- .bss.num       0x000000003ffbe6d4        0x4 esp-idf/main/libmain.a(pwm_generate_main.c.obj)
+                0x000000003ffc2550        0x4 esp-idf/main/libmain.a(pwm_generate_main.c.obj)
+ .bss.num       0x000000003ffc2554        0x4 esp-idf/main/libmain.a(pwm_generate_main.c.obj)
  .bss.handle_console
-                0x000000003ffbe6d8        0x4 esp-idf/main/libmain.a(pwm_generate_main.c.obj)
+                0x000000003ffc2558        0x4 esp-idf/main/libmain.a(pwm_generate_main.c.obj)
  .bss.s_burn_counter
-                0x000000003ffbe6dc        0x4 esp-idf/efuse/libefuse.a(esp_efuse_utility.c.obj)
+                0x000000003ffc255c        0x4 esp-idf/efuse/libefuse.a(esp_efuse_utility.c.obj)
  .bss.s_ipc_wait
-                0x000000003ffbe6e0        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
+                0x000000003ffc2560        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
  .bss.s_func_arg
-                0x000000003ffbe6e8        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
- .bss.s_func    0x000000003ffbe6f0        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
+                0x000000003ffc2568        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
+ .bss.s_func    0x000000003ffc2570        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
  .bss.s_ipc_ack
-                0x000000003ffbe6f8        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
+                0x000000003ffc2578        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
  .bss.s_ipc_sem
-                0x000000003ffbe700        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
+                0x000000003ffc2580        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
  .bss.s_ipc_mutex
-                0x000000003ffbe708        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
+                0x000000003ffc2588        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
  .bss.s_ipc_task_handle
-                0x000000003ffbe710        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
+                0x000000003ffc2590        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc.c.obj)
  .bss.esp_ipc_isr_finish_cmd
-                0x000000003ffbe718        0x4 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
+                0x000000003ffc2598        0x4 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
  .bss.s_stored_interrupt_level
-                0x000000003ffbe71c        0x4 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
+                0x000000003ffc259c        0x4 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
  .bss.s_count_of_nested_calls
-                0x000000003ffbe720        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
+                0x000000003ffc25a0        0x8 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
  .bss.s_stall_state
-                0x000000003ffbe728        0x4 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
+                0x000000003ffc25a8        0x4 esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
  .bss.s_ledc_slow_clk_8M
-                0x000000003ffbe72c        0x4 esp-idf/driver/libdriver.a(ledc.c.obj)
+                0x000000003ffc25ac        0x4 esp-idf/driver/libdriver.a(ledc.c.obj)
  .bss.s_ledc_fade_rec
-                0x000000003ffbe730       0x40 esp-idf/driver/libdriver.a(ledc.c.obj)
+                0x000000003ffc25b0       0x40 esp-idf/driver/libdriver.a(ledc.c.obj)
  .bss.p_ledc_obj
-                0x000000003ffbe770        0x8 esp-idf/driver/libdriver.a(ledc.c.obj)
+                0x000000003ffc25f0        0x8 esp-idf/driver/libdriver.a(ledc.c.obj)
  .bss.ref_counts
-                0x000000003ffbe778       0x22 esp-idf/driver/libdriver.a(periph_ctrl.c.obj)
- *fill*         0x000000003ffbe79a        0x2 
+                0x000000003ffc25f8       0x22 esp-idf/driver/libdriver.a(periph_ctrl.c.obj)
+ *fill*         0x000000003ffc261a        0x2 
  .bss.s_rtc_isr_handle
-                0x000000003ffbe79c        0x4 esp-idf/driver/libdriver.a(rtc_module.c.obj)
+                0x000000003ffc261c        0x4 esp-idf/driver/libdriver.a(rtc_module.c.obj)
  .bss.s_rtc_isr_handler_list
-                0x000000003ffbe7a0        0x4 esp-idf/driver/libdriver.a(rtc_module.c.obj)
+                0x000000003ffc2620        0x4 esp-idf/driver/libdriver.a(rtc_module.c.obj)
  .bss.p_uart_obj
-                0x000000003ffbe7a4        0xc esp-idf/driver/libdriver.a(uart.c.obj)
+                0x000000003ffc2624        0xc esp-idf/driver/libdriver.a(uart.c.obj)
  .bss.s_flash_op_complete
-                0x000000003ffbe7b0        0x1 esp-idf/spi_flash/libspi_flash.a(cache_utils.c.obj)
+                0x000000003ffc2630        0x1 esp-idf/spi_flash/libspi_flash.a(cache_utils.c.obj)
  .bss.s_flash_op_can_start
-                0x000000003ffbe7b1        0x1 esp-idf/spi_flash/libspi_flash.a(cache_utils.c.obj)
- *fill*         0x000000003ffbe7b2        0x2 
+                0x000000003ffc2631        0x1 esp-idf/spi_flash/libspi_flash.a(cache_utils.c.obj)
+ *fill*         0x000000003ffc2632        0x2 
  .bss.s_flash_op_mutex
-                0x000000003ffbe7b4        0x4 esp-idf/spi_flash/libspi_flash.a(cache_utils.c.obj)
+                0x000000003ffc2634        0x4 esp-idf/spi_flash/libspi_flash.a(cache_utils.c.obj)
  .bss.s_flash_op_cache_state
-                0x000000003ffbe7b8        0x8 esp-idf/spi_flash/libspi_flash.a(cache_utils.c.obj)
+                0x000000003ffc2638        0x8 esp-idf/spi_flash/libspi_flash.a(cache_utils.c.obj)
  .bss.s_mmap_last_handle
-                0x000000003ffbe7c0        0x4 esp-idf/spi_flash/libspi_flash.a(flash_mmap.c.obj)
+                0x000000003ffc2640        0x4 esp-idf/spi_flash/libspi_flash.a(flash_mmap.c.obj)
  .bss.s_mmap_page_refcnt
-                0x000000003ffbe7c4      0x100 esp-idf/spi_flash/libspi_flash.a(flash_mmap.c.obj)
+                0x000000003ffc2644      0x100 esp-idf/spi_flash/libspi_flash.a(flash_mmap.c.obj)
  .bss.s_mmap_entries_head
-                0x000000003ffbe8c4        0x4 esp-idf/spi_flash/libspi_flash.a(flash_mmap.c.obj)
+                0x000000003ffc2744        0x4 esp-idf/spi_flash/libspi_flash.a(flash_mmap.c.obj)
  .bss.s_flash_guard_ops
-                0x000000003ffbe8c8        0x4 esp-idf/spi_flash/libspi_flash.a(flash_ops.c.obj)
+                0x000000003ffc2748        0x4 esp-idf/spi_flash/libspi_flash.a(flash_ops.c.obj)
  .bss.esp_flash_default_chip
-                0x000000003ffbe8cc        0x4 esp-idf/spi_flash/libspi_flash.a(esp_flash_spi_init.c.obj)
-                0x000000003ffbe8cc                esp_flash_default_chip
+                0x000000003ffc274c        0x4 esp-idf/spi_flash/libspi_flash.a(esp_flash_spi_init.c.obj)
+                0x000000003ffc274c                esp_flash_default_chip
  .bss.s_partition_list_lock
-                0x000000003ffbe8d0        0x4 esp-idf/spi_flash/libspi_flash.a(partition.c.obj)
+                0x000000003ffc2750        0x4 esp-idf/spi_flash/libspi_flash.a(partition.c.obj)
  .bss.s_partition_list
-                0x000000003ffbe8d4        0x4 esp-idf/spi_flash/libspi_flash.a(partition.c.obj)
- .bss.reason    0x000000003ffbe8d8        0x8 esp-idf/esp_system/libesp_system.a(crosscore_int.c.obj)
+                0x000000003ffc2754        0x4 esp-idf/spi_flash/libspi_flash.a(partition.c.obj)
+ .bss.reason    0x000000003ffc2758        0x8 esp-idf/esp_system/libesp_system.a(crosscore_int.c.obj)
  .bss.twdt_config
-                0x000000003ffbe8e0        0x4 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
+                0x000000003ffc2760        0x4 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
  .bss.twdt_context
-                0x000000003ffbe8e4        0x8 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
+                0x000000003ffc2764        0x8 esp-idf/esp_system/libesp_system.a(task_wdt.c.obj)
  .bss.s_rtc_clk_freq
-                0x000000003ffbe8ec        0x4 esp-idf/esp_hw_support/libesp_hw_support.a(clk_ctrl_os.c.obj)
+                0x000000003ffc276c        0x4 esp-idf/esp_hw_support/libesp_hw_support.a(clk_ctrl_os.c.obj)
  .bss.s_periph_ref_counts
-                0x000000003ffbe8f0        0x1 esp-idf/esp_hw_support/libesp_hw_support.a(clk_ctrl_os.c.obj)
+                0x000000003ffc2770        0x1 esp-idf/esp_hw_support/libesp_hw_support.a(clk_ctrl_os.c.obj)
  .bss.s_periph_use_8m_flag
-                0x000000003ffbe8f1        0x1 esp-idf/esp_hw_support/libesp_hw_support.a(sleep_modes.c.obj)
- *fill*         0x000000003ffbe8f2        0x2 
+                0x000000003ffc2771        0x1 esp-idf/esp_hw_support/libesp_hw_support.a(sleep_modes.c.obj)
+ *fill*         0x000000003ffc2772        0x2 
  .bss.curr_partition$4858
-                0x000000003ffbe8f4        0x4 esp-idf/app_update/libapp_update.a(esp_ota_ops.c.obj)
+                0x000000003ffc2774        0x4 esp-idf/app_update/libapp_update.a(esp_ota_ops.c.obj)
  *(.ext_ram.bss .ext_ram.bss.*)
  *(.dynbss .dynsbss .gnu.linkonce.b .gnu.linkonce.b.* .gnu.linkonce.sb .gnu.linkonce.sb.* .gnu.linkonce.sb2 .gnu.linkonce.sb2.* .sbss .sbss.* .sbss2 .sbss2.* .scommon .share.mem)
  *(EXCLUDE_FILE(*libnimble.a *libbtdm_app.a *libbt.a) COMMON)
- COMMON         0x000000003ffbe8f8        0x4 esp-idf/heap/libheap.a(heap_caps_init.c.obj)
-                0x000000003ffbe8f8                registered_heaps
- COMMON         0x000000003ffbe8fc        0xc esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
-                0x000000003ffbe8fc                esp_ipc_isr_start_fl
-                0x000000003ffbe900                esp_ipc_func
-                0x000000003ffbe904                esp_ipc_func_arg
-                0x000000003ffbe908                . = ALIGN (0x4)
-                0x000000003ffbe908                _bt_bss_start = ABSOLUTE (.)
+ COMMON         0x000000003ffc2778        0x4 esp-idf/heap/libheap.a(heap_caps_init.c.obj)
+                0x000000003ffc2778                registered_heaps
+ COMMON         0x000000003ffc277c        0xc esp-idf/esp_ipc/libesp_ipc.a(esp_ipc_isr.c.obj)
+                0x000000003ffc277c                esp_ipc_isr_start_fl
+                0x000000003ffc2780                esp_ipc_func
+                0x000000003ffc2784                esp_ipc_func_arg
+                0x000000003ffc2788                . = ALIGN (0x4)
+                0x000000003ffc2788                _bt_bss_start = ABSOLUTE (.)
  *libbt.a:(.bss .bss.*)
-                0x000000003ffbe908                . = ALIGN (0x4)
-                0x000000003ffbe908                _bt_bss_end = ABSOLUTE (.)
-                0x000000003ffbe908                . = ALIGN (0x4)
-                0x000000003ffbe908                _bt_common_start = ABSOLUTE (.)
+                0x000000003ffc2788                . = ALIGN (0x4)
+                0x000000003ffc2788                _bt_bss_end = ABSOLUTE (.)
+                0x000000003ffc2788                . = ALIGN (0x4)
+                0x000000003ffc2788                _bt_common_start = ABSOLUTE (.)
  *libbt.a:(COMMON)
-                0x000000003ffbe908                . = ALIGN (0x4)
-                0x000000003ffbe908                _bt_common_end = ABSOLUTE (.)
-                0x000000003ffbe908                . = ALIGN (0x4)
-                0x000000003ffbe908                _btdm_bss_start = ABSOLUTE (.)
+                0x000000003ffc2788                . = ALIGN (0x4)
+                0x000000003ffc2788                _bt_common_end = ABSOLUTE (.)
+                0x000000003ffc2788                . = ALIGN (0x4)
+                0x000000003ffc2788                _btdm_bss_start = ABSOLUTE (.)
  *libbtdm_app.a:(.bss .bss.*)
-                0x000000003ffbe908                . = ALIGN (0x4)
-                0x000000003ffbe908                _btdm_bss_end = ABSOLUTE (.)
-                0x000000003ffbe908                . = ALIGN (0x4)
-                0x000000003ffbe908                _btdm_common_start = ABSOLUTE (.)
+                0x000000003ffc2788                . = ALIGN (0x4)
+                0x000000003ffc2788                _btdm_bss_end = ABSOLUTE (.)
+                0x000000003ffc2788                . = ALIGN (0x4)
+                0x000000003ffc2788                _btdm_common_start = ABSOLUTE (.)
  *libbtdm_app.a:(COMMON)
-                0x000000003ffbe908                . = ALIGN (0x4)
-                0x000000003ffbe908                _btdm_common_end = ABSOLUTE (.)
-                0x000000003ffbe908                . = ALIGN (0x4)
-                0x000000003ffbe908                _nimble_bss_start = ABSOLUTE (.)
+                0x000000003ffc2788                . = ALIGN (0x4)
+                0x000000003ffc2788                _btdm_common_end = ABSOLUTE (.)
+                0x000000003ffc2788                . = ALIGN (0x4)
+                0x000000003ffc2788                _nimble_bss_start = ABSOLUTE (.)
  *libnimble.a:(.bss .bss.*)
-                0x000000003ffbe908                . = ALIGN (0x4)
-                0x000000003ffbe908                _nimble_bss_end = ABSOLUTE (.)
-                0x000000003ffbe908                . = ALIGN (0x4)
-                0x000000003ffbe908                _nimble_common_start = ABSOLUTE (.)
+                0x000000003ffc2788                . = ALIGN (0x4)
+                0x000000003ffc2788                _nimble_bss_end = ABSOLUTE (.)
+                0x000000003ffc2788                . = ALIGN (0x4)
+                0x000000003ffc2788                _nimble_common_start = ABSOLUTE (.)
  *libnimble.a:(COMMON)
-                0x000000003ffbe908                . = ALIGN (0x4)
-                0x000000003ffbe908                _nimble_common_end = ABSOLUTE (.)
-                0x000000003ffbe908                . = ALIGN (0x8)
-                0x000000003ffbe908                _bss_end = ABSOLUTE (.)
+                0x000000003ffc2788                . = ALIGN (0x4)
+                0x000000003ffc2788                _nimble_common_end = ABSOLUTE (.)
+                0x000000003ffc2788                . = ALIGN (0x8)
+                0x000000003ffc2788                _bss_end = ABSOLUTE (.)
                 0x0000000000000001                ASSERT (((_bss_end - ORIGIN (dram0_0_seg)) <= LENGTH (dram0_0_seg)), DRAM segment data does not fit.)
 
 .flash.appdesc  0x000000003f400020      0x100
@@ -12118,6 +12118,9 @@ LOAD c:/users/15148/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch5-8.4.0/xt
 
 .flash.rodata   0x000000003f400120     0x8284
                 0x000000003f400120                _flash_rodata_start = ABSOLUTE (.)
+ *(.rodata_wlog_error .rodata_wlog_error.*)
+ *(.rodata_wlog_info .rodata_wlog_info.*)
+ *(.rodata_wlog_warning .rodata_wlog_warning.*)
  *(EXCLUDE_FILE(*libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_winbond.* *libspi_flash.a:spi_flash_chip_th.* *libspi_flash.a:spi_flash_chip_mxic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libspi_flash.a:spi_flash_chip_boya.* *libspi_flash.a:memspi_host_driver.* *libsoc.a:lldesc.* *libnewlib.a:stdatomic.* *libnewlib.a:heap.* *libnewlib.a:assert.* *libnewlib.a:abort.* *libheap.a:multi_heap.* *libheap.a:heap_tlsf.* *libhal.a:wdt_hal_iram.* *libhal.a:spi_slave_hal_iram.* *libhal.a:spi_hal_iram.* *libhal.a:spi_flash_hal_iram.* *libhal.a:spi_flash_encrypt_hal_iram.* *libhal.a:soc_hal.* *libhal.a:ledc_hal_iram.* *libhal.a:i2c_hal_iram.* *libhal.a:cpu_hal.* *libesp_system.a:ubsan.* *libesp_system.a:esp_err.* *libesp_hw_support.a:rtc_clk.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:app_trace.* *libphy.a *libgcov.a) .rodata EXCLUDE_FILE(*libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_winbond.* *libspi_flash.a:spi_flash_chip_th.* *libspi_flash.a:spi_flash_chip_mxic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libspi_flash.a:spi_flash_chip_boya.* *libspi_flash.a:memspi_host_driver.* *libsoc.a:lldesc.* *libnewlib.a:stdatomic.* *libnewlib.a:heap.* *libnewlib.a:assert.* *libnewlib.a:abort.* *libheap.a:multi_heap.* *libheap.a:heap_tlsf.* *libhal.a:wdt_hal_iram.* *libhal.a:spi_slave_hal_iram.* *libhal.a:spi_hal_iram.* *libhal.a:spi_flash_hal_iram.* *libhal.a:spi_flash_encrypt_hal_iram.* *libhal.a:soc_hal.* *libhal.a:ledc_hal_iram.* *libhal.a:i2c_hal_iram.* *libhal.a:cpu_hal.* *libesp_system.a:ubsan.* *libesp_system.a:esp_err.* *libesp_hw_support.a:rtc_clk.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:app_trace.* *libphy.a *libgcov.a) .rodata.* EXCLUDE_FILE(*libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_winbond.* *libspi_flash.a:spi_flash_chip_th.* *libspi_flash.a:spi_flash_chip_mxic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libspi_flash.a:spi_flash_chip_boya.* *libspi_flash.a:memspi_host_driver.* *libsoc.a:lldesc.* *libnewlib.a:stdatomic.* *libnewlib.a:heap.* *libnewlib.a:assert.* *libnewlib.a:abort.* *libheap.a:multi_heap.* *libheap.a:heap_tlsf.* *libhal.a:wdt_hal_iram.* *libhal.a:spi_slave_hal_iram.* *libhal.a:spi_hal_iram.* *libhal.a:spi_flash_hal_iram.* *libhal.a:spi_flash_encrypt_hal_iram.* *libhal.a:soc_hal.* *libhal.a:ledc_hal_iram.* *libhal.a:i2c_hal_iram.* *libhal.a:cpu_hal.* *libesp_system.a:ubsan.* *libesp_system.a:esp_err.* *libesp_hw_support.a:rtc_clk.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:app_trace.* *libphy.a *libgcov.a) .sdata2 EXCLUDE_FILE(*libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_winbond.* *libspi_flash.a:spi_flash_chip_th.* *libspi_flash.a:spi_flash_chip_mxic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libspi_flash.a:spi_flash_chip_boya.* *libspi_flash.a:memspi_host_driver.* *libsoc.a:lldesc.* *libnewlib.a:stdatomic.* *libnewlib.a:heap.* *libnewlib.a:assert.* *libnewlib.a:abort.* *libheap.a:multi_heap.* *libheap.a:heap_tlsf.* *libhal.a:wdt_hal_iram.* *libhal.a:spi_slave_hal_iram.* *libhal.a:spi_hal_iram.* *libhal.a:spi_flash_hal_iram.* *libhal.a:spi_flash_encrypt_hal_iram.* *libhal.a:soc_hal.* *libhal.a:ledc_hal_iram.* *libhal.a:i2c_hal_iram.* *libhal.a:cpu_hal.* *libesp_system.a:ubsan.* *libesp_system.a:esp_err.* *libesp_hw_support.a:rtc_clk.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:app_trace.* *libphy.a *libgcov.a) .sdata2.* EXCLUDE_FILE(*libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_winbond.* *libspi_flash.a:spi_flash_chip_th.* *libspi_flash.a:spi_flash_chip_mxic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libspi_flash.a:spi_flash_chip_boya.* *libspi_flash.a:memspi_host_driver.* *libsoc.a:lldesc.* *libnewlib.a:stdatomic.* *libnewlib.a:heap.* *libnewlib.a:assert.* *libnewlib.a:abort.* *libheap.a:multi_heap.* *libheap.a:heap_tlsf.* *libhal.a:wdt_hal_iram.* *libhal.a:spi_slave_hal_iram.* *libhal.a:spi_hal_iram.* *libhal.a:spi_flash_hal_iram.* *libhal.a:spi_flash_encrypt_hal_iram.* *libhal.a:soc_hal.* *libhal.a:ledc_hal_iram.* *libhal.a:i2c_hal_iram.* *libhal.a:cpu_hal.* *libesp_system.a:ubsan.* *libesp_system.a:esp_err.* *libesp_hw_support.a:rtc_clk.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:app_trace.* *libphy.a *libgcov.a) .srodata EXCLUDE_FILE(*libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_winbond.* *libspi_flash.a:spi_flash_chip_th.* *libspi_flash.a:spi_flash_chip_mxic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libspi_flash.a:spi_flash_chip_boya.* *libspi_flash.a:memspi_host_driver.* *libsoc.a:lldesc.* *libnewlib.a:stdatomic.* *libnewlib.a:heap.* *libnewlib.a:assert.* *libnewlib.a:abort.* *libheap.a:multi_heap.* *libheap.a:heap_tlsf.* *libhal.a:wdt_hal_iram.* *libhal.a:spi_slave_hal_iram.* *libhal.a:spi_hal_iram.* *libhal.a:spi_flash_hal_iram.* *libhal.a:spi_flash_encrypt_hal_iram.* *libhal.a:soc_hal.* *libhal.a:ledc_hal_iram.* *libhal.a:i2c_hal_iram.* *libhal.a:cpu_hal.* *libesp_system.a:ubsan.* *libesp_system.a:esp_err.* *libesp_hw_support.a:rtc_clk.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:app_trace.* *libphy.a *libgcov.a) .srodata.*)
  .rodata.str1.4
                 0x000000003f400120       0x53 esp-idf/esp_system/libesp_system.a(cpu_start.c.obj)
@@ -13020,9 +13023,6 @@ LOAD c:/users/15148/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch5-8.4.0/xt
  *fill*         0x000000003f408142        0x2 
  .rodata        0x000000003f408144      0x16c c:/users/15148/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch5-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/lib/no-rtti\libc.a(lib_a-locale.o)
                 0x000000003f408144                __default_global_locale
- *(.rodata_wlog_error .rodata_wlog_error.*)
- *(.rodata_wlog_info .rodata_wlog_info.*)
- *(.rodata_wlog_warning .rodata_wlog_warning.*)
  *(.irom1.text)
  *(.gnu.linkonce.r.*)
  *(.rodata1)
@@ -15512,9 +15512,9 @@ LOAD c:/users/15148/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch5-8.4.0/xt
                 0x000000004008bc3c                _iram_end = ABSOLUTE (.)
 
 .dram0.heap_start
-                0x000000003ffbe908        0x0
-                0x000000003ffbe908                . = ALIGN (0x8)
-                0x000000003ffbe908                _heap_start = ABSOLUTE (.)
+                0x000000003ffc2788        0x0
+                0x000000003ffc2788                . = ALIGN (0x8)
+                0x000000003ffc2788                _heap_start = ABSOLUTE (.)
 
 .xt.prop        0x0000000000000000    0x1d1d8
  *(.xt.prop .gnu.linkonce.prop.*)
