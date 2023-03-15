@@ -7,10 +7,14 @@ time_len = 2;% 设置时间长度为2s
 
 % fs = 44100;
 % t_orig = 0:1/fs:time_len-1/fs;
-% data_read = sin(2*pi*500*t_orig); % 手动生成单频信号
+% data_read = sin(2*pi*1000*t_orig); % 手动生成单频信号
+% 
+% filename = '1kHz';
 
-[data_read, fs] = audioread('voice_command_test\open-the-door-George.mp3'); % 读取音频
+filename = 'heysiri_jy3';
+[data_read, fs] = audioread('voice_command_test\heysiri_jy3.m4a'); % 读取音频
 % [data_read, fs] = audioread('voice_command_test\1k_01.wav'); % 读取音频
+
 
 data_read = data_read / max(abs(data_read)); % 音频归一化
 
@@ -93,6 +97,12 @@ duty = (target_wave + 1) / 2 * (duty_upper_bound - duty_lower_bound) + duty_lowe
 % plot(duty)
 % title("占空比")
 
+% fft_data = DrawFFT(duty, target_frequency, 'duty波频谱图');
+
+busy_time = duty * full_busy; % us
+results = [round(busy_time)];
+
+
 %% generate pwm wave
 period_pwm = 1 / sample_rate;
 N_pwm = time_len * sample_rate;
@@ -110,6 +120,21 @@ end
 
 %% 绘制PWM波频谱图
 fft_data = DrawFFT(pwm_wave, sample_rate, 'PWM波频谱图');
+
+%% Write duty cycle traces to txt files
+fid = fopen(['traces_test\',filename(1:end),'_duty_cycle_32k.txt'], 'w');
+fprintf(fid, "a={");
+for i=1:2:length(results)
+    fprintf(fid, "%d,", results(i));   
+    if(mod(i, 20)== 1) 
+        fprintf(fid, "\n");
+    end
+end
+fprintf(fid, "%d", results(end));
+fprintf(fid, "};");
+fclose(fid);
+
+
 
 
 %% 画出信号的频谱
