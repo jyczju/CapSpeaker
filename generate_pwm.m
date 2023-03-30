@@ -5,16 +5,14 @@ clear;
 
 time_len = 2;% 设置时间长度为2s
 
-% fs = 44100;
-% t_orig = 0:1/fs:time_len-1/fs;
-% data_read = sin(2*pi*1000*t_orig); % 手动生成单频信号
-% 
-% filename = '1kHz';
+fs = 44100;
+t_orig = 0:1/fs:time_len-1/fs;
+data_read = sawtooth(2*pi*1000*t_orig,0.5);% sin(2*pi*1000*t_orig); % 手动生成单频信号
 
-filename = 'heysiri_jy3';
-[data_read, fs] = audioread('voice_command_test\heysiri_jy3.m4a'); % 读取音频
-% [data_read, fs] = audioread('voice_command_test\1k_01.wav'); % 读取音频
+filename = '1kHz_sawtooth.mp3';
 
+% filename = 'call-my-wife-George.mp3';
+% [data_read, fs] = audioread(['voice_command_test\',filename]); % 读取音频
 
 data_read = data_read / max(abs(data_read)); % 音频归一化
 
@@ -38,15 +36,15 @@ title("原始音频")
 fft_data = DrawFFT(data, fs, '原始音频频谱图');
 
 %% AM调制
-fc = 3000;
-% data_am = (data+1)/2;
-data_am = modulate(data, fc, fs, 'am');
-
-% figure()
-% plot(t_orig, data_am)
-% title("AM调制声音信号")
-
-fft_data = DrawFFT(data_am, fs, 'AM调制频谱图');
+% fc = 3000;
+% % data_am = (data+1)/2;
+% data_am = modulate(data, fc, fs, 'am');
+% 
+% % figure()
+% % plot(t_orig, data_am)
+% % title("AM调制声音信号")
+% 
+% fft_data = DrawFFT(data_am, fs, 'AM调制频谱图');
 
 
 %% Remove the part of original audio greater than 2000 Hz
@@ -87,10 +85,28 @@ target_wave(find(isnan(target_wave))) = 0;
 
 target_wave = target_wave / max(abs(target_wave)); % 再次归一化
 
-% figure()
-% plot(target_wave)
+figure()
+plot(target_wave)
 
 %% Calculate PWM duty cycle
+% % 对target_wave进行非线性化
+% for i = 1:length(target_wave)
+%     if target_wave(i) > 0.005
+%         target_wave(i) = sqrt(target_wave(i));
+%     elseif target_wave(i) < -0.005
+%         target_wave(i) = - sqrt(-target_wave(i));
+%     end
+% end
+% 
+% figure()
+% plot(target_wave)
+% title("非线性化后的声音波形")
+% audiowrite(['voice_command_nonlinear/',filename(1:end-4),'_nonlinear.wav'],data,fs);
+% 
+% 
+
+
+% 生成duty
 duty = (target_wave + 1) / 2 * (duty_upper_bound - duty_lower_bound) + duty_lower_bound;
 
 % figure()
@@ -114,15 +130,17 @@ for i = 1:100:N_pwm-100+1
     pwm_wave(i:i+busy_num) = 1;  
 end
 
-% figure()
-% plot(pwm_wave)
-% ylim([-1,2])
+figure()
+plot(pwm_wave)
+ylim([-1,2])
+title("pwm_wave")
 
 %% 绘制PWM波频谱图
 fft_data = DrawFFT(pwm_wave, sample_rate, 'PWM波频谱图');
 
 %% Write duty cycle traces to txt files
-fid = fopen(['traces_test\',filename(1:end),'_duty_cycle_32k.txt'], 'w');
+fid = fopen(['traces_test\',filename(1:end-4),'_duty_cycle_32k.txt'], 'w');
+% fid = fopen(['traces_test\',filename(1:end-4),'_duty_cycle_32k_nonlinear.txt'], 'w');
 fprintf(fid, "a={");
 for i=1:2:length(results)
     fprintf(fid, "%d,", results(i));   
@@ -133,9 +151,6 @@ end
 fprintf(fid, "%d", results(end));
 fprintf(fid, "};");
 fclose(fid);
-
-
-
 
 %% 画出信号的频谱
 % data 需要处理的原始信号 fs:采样频率

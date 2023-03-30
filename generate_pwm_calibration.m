@@ -7,14 +7,14 @@ clear;
 
 time_len = 2;% 设置时间长度为2s
 
-filename = 'heysiri_xiaogang_speed-150.mp3';
+filename = 'heysiri_xiaoxiao.mp3';
 [data_read, fs] = audioread(['voice_command_test\',filename]); % 读取音频
 data_read = mean(data_read, 2); % 适用于多声道，对多个声道取均值
 
 data_read = data_read / max(abs(data_read)); % 音频归一化
 
 % 进行长度填充
-offset = round(0.3*fs);
+offset = 0;
 if(length(data_read) > time_len * fs) % fs为音频采样率
     data = data_read(1+offset:time_len * fs+offset);
 else
@@ -34,6 +34,7 @@ fre_rsp = xlsread('frequency_response_2k.xls');
 fre_rsp = fre_rsp.';
 fre = fre_rsp(1,:);
 rsp = fre_rsp(2,:);
+rsp = rsp.^(0.5);
 fre_canon = 1/time_len:1/time_len:2000;
 rsp_canon = interp1(fre, rsp, fre_canon, 'linear');
 
@@ -89,11 +90,11 @@ fft_data = DrawFFT(data, fs, '频率校正后音频频谱图');
 
 %% Remove the part of original audio greater than 2000 Hz
 % data = mean(data, 2); % 适用于多声道，对多个声道取均值
-% 
-% N = length(data);
-% t_canon = 0 : 1/fs : (N-1)/fs; % 原始声音信号采样对应的时间点
-% fx_canon = 0 : fs/N : fs - fs/N;
-% 
+
+N = length(data);
+t_canon = 0 : 1/fs : (N-1)/fs; % 原始声音信号采样对应的时间点
+fx_canon = 0 : fs/N : fs - fs/N;
+
 % % filter low frequency bands
 % pass_low = 20;
 % pass_high = 2000;   
@@ -101,13 +102,14 @@ fft_data = DrawFFT(data, fs, '频率校正后音频频谱图');
 % 
 % ts_filtered = idealfilter(ts, [pass_low, pass_high], 'pass');
 % data_filtered = ts_filtered.Data;
+data_filtered = data;
 
 % figure()
 % plot(data_filtered)
 % title("低通滤波后的音频")
 
 %% Set PWM parameters
-target_frequency = 32000; % PWM carrier frequency
+target_frequency = 31300; % PWM carrier frequency
 duty_upper_bound = 0.99; % maximum duty cycle
 duty_lower_bound = 0.01; % minimum duty cycle
 full_busy = 2047; % Timer accuracy decreased by 1
@@ -160,7 +162,7 @@ end
 % fft_data = DrawFFT(pwm_wave, sample_rate, 'PWM波频谱图');
 
 %% Write duty cycle traces to txt files
-fid = fopen(['traces_test\',filename(1:end-4),'_calibration_duty_cycle_32k.txt'], 'w');
+fid = fopen(['traces_test\',filename(1:end-4),'_calibration_duty_cycle_31k3.txt'], 'w');
 fprintf(fid, "a={");
 for i=1:2:length(results)
     fprintf(fid, "%d,", results(i));   
