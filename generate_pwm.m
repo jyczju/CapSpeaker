@@ -7,9 +7,9 @@ time_len = 2;% 设置时间长度为2s
 
 fs = 44100;
 t_orig = 0:1/fs:time_len-1/fs;
-data_read = sawtooth(2*pi*1000*t_orig,0.5);% sin(2*pi*1000*t_orig); % 手动生成单频信号
+data_read = sin(2*pi*200*t_orig); % 手动生成单频信号
 
-filename = '1kHz_sawtooth.mp3';
+filename = '200Hz_sine.mp3';
 
 % filename = 'call-my-wife-George.mp3';
 % [data_read, fs] = audioread(['voice_command_test\',filename]); % 读取音频
@@ -109,9 +109,9 @@ plot(target_wave)
 % 生成duty
 duty = (target_wave + 1) / 2 * (duty_upper_bound - duty_lower_bound) + duty_lower_bound;
 
-% figure()
-% plot(duty)
-% title("占空比")
+figure()
+plot(duty)
+title("占空比")
 
 % fft_data = DrawFFT(duty, target_frequency, 'duty波频谱图');
 
@@ -133,7 +133,7 @@ end
 figure()
 plot(pwm_wave)
 ylim([-1,2])
-title("pwm_wave")
+title("pwm wave")
 
 %% 绘制PWM波频谱图
 fft_data = DrawFFT(pwm_wave, sample_rate, 'PWM波频谱图');

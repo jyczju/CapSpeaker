@@ -5,6 +5,7 @@ time_len = 1.0;% 设置时间长度为2s
 
 filename = '31k-sqrt-iPhone4s.wav';
 [data_read, fs] = audioread(['voice_plot\',filename]); % 读取音频
+data_read = data_read(6000:end);
 
 % 进行长度填充
 if(length(data_read) > time_len * fs) % fs为音频采样率
